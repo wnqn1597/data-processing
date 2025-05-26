@@ -472,7 +472,7 @@ def process_data(input, ):
 
             filtered_data.append(item)
 
-            if len(filtered_data) >= 100:
+            if len(filtered_data) >= 1000:
                 break
     return filtered_data
 
@@ -482,8 +482,8 @@ def main():
     if not keepLinks:
         ignoreTag('a')
 
-    # fname = "zhwiki-20250201-pages-articles-multistream4.xml-p2889649p3391029.bz2"
-    fname = "zhwiki-20250201-pages-articles-multistream.xml.bz2"
+    fname = "zhwiki-20250201-pages-articles-multistream4.xml-p2889649p3391029.bz2"
+    # fname = "zhwiki-20250201-pages-articles-multistream.xml.bz2"
     f = bz2.BZ2File(fname, mode='r')
     data = process_data(f)
 
